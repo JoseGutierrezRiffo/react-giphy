@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 
-const GifGridItem = ({ image }) => {
-  const { title, urlImg } = image;
-
+const GifGridItem = ({ title, urlImg }) => {
   return (
     <Fragment>
       <div className="card animate__animated animate__zoomIn">
@@ -14,3 +13,8 @@ const GifGridItem = ({ image }) => {
 };
 
 export default GifGridItem;
+
+GifGridItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  urlImg: PropTypes.string.isRequired
+};
